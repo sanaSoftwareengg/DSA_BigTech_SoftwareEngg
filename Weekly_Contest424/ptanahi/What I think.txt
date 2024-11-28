@@ -1,0 +1,37 @@
+We have an array of zeros and ones and all the number but including zeros all positive numbers first of all right
+ second we have to make all the numbers in this array
+ thing we need to follow an algorithm to make those things zero
+ Fourth  the pointer will go to and every degree mint and if there is no degree mint it will go in the same direction as if example taking an array
+[1,2,0,2 ,0,3,1]
+[1,2,0,2 ,0c,3,1]This is the current variable this is zero so it will go for it and it is not zero it is 3 it will reduce it to two and then will come back and will go one more back finding it to will reduce it and make it one
+[1,2,0,1 ,0c,2,1 ]
+After coming back to zero it will go in front and reduce the two two one and come back to zero and again go back to one and reduce just to 0
+[1,2,0,0c,0,1,1] As this  turn to zero it will not go back to the last current value and now it will move in front till it gets non zero value as soon as the value is reached the process will be repeated
+[1,2,0,0,0,1c,1][1,2,0,0,0c,0,0]
+As you no non zero values left on the right side it will go back to left side Til it gets non zero value
+It will repeat the process
+Don't jump on the solution
+
+
+
+xample Array: [1, 2, 0, 2, 0, 3, 1]
+Start at curr = 2 (nums[2] = 0):
+
+Initially, we move right.
+First few steps (moving right):
+
+Move to index 3, decrement nums[3] (2 → 1).
+Reverse direction, move left to index 2 (nums[2] = 0).
+Move right again to index 3, decrement nums[3] (1 → 0).
+Continue until nums[3] = 0:
+
+Move to index 4, decrement nums[4] (3 → 2).
+Reverse direction, go back to index 3, skip (already 0).
+Decrement nums at 4 further until it becomes 0.
+Eventually, move through entire array:
+
+Repeat similar steps, alternating left and right as you decrement values.
+Step 5: Think of Edge Cases
+If there are no other zeros in the array besides the starting curr.
+If the array is already [0, 0, 0, ..., 0].
+If large values exist, which may require multiple decrements before they become 0.
